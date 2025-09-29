@@ -26,9 +26,6 @@ challenge03-serverest/
 │   │   └── results/
 │   └── manual/
 │       └── casos_de_teste/
-├── scripts/
-│   ├── deploy_ec2.sh
-│   └── setup_environment.sh
 └── README.md
 ```
 
