@@ -1,0 +1,7 @@
+# ==========================================
+# FILE: requirements.txt
+# ==========================================
+# robotframework==6.1.1
+# robotframework-requests==0.9.4
+# requests==2.31.0
+# robotframework-faker==5.0.0
