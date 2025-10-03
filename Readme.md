@@ -1,68 +1,62 @@
+
 # QA Challenge 03 - PB Nobugs
 
-This project is part of the QA Challenge series, focusing on practical quality assurance tasks and automation.
+Este projeto faz parte da série **QA Challenge**, com foco em testes automatizados e práticas de qualidade de software.
 
-## Project Structure
+## Estrutura do Projeto
 
-- `src/` - Source code for the application under test.
-- `tests/` - Automated test scripts.
-- `docs/` - Documentation and resources.
+* **`tests/`** – Scripts de testes automatizados em Robot Framework.
+* **`docs/`** – Documentação e materiais de apoio.
 
-## Getting Started
+## Pré-requisitos
 
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/yourusername/qa-challenge03-PB-Nobugs.git
-    cd qa-challenge03-PB-Nobugs
-    ```
+* [Python 3.x](https://www.python.org/downloads/) instalado
+* [pip](https://pip.pypa.io/en/stable/installation/) atualizado
+* [Robot Framework](https://robotframework.org/)
 
-2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+Instale o Robot Framework e bibliotecas necessárias:
 
-3. **Run tests:**
-    ```bash
-    npm test
-    ```
+```bash
+pip install -r requirements.txt
+```
 
-## How to Run the Code
+## Como Executar os Testes
 
-- **Start the Application (if applicable):**
-    If the project includes an application to run, start it with:
-    ```bash
-    npm start
-    ```
-    or follow instructions in the `src/` directory's README if available.
+1. Clone o repositório:
 
-- **Run Specific Test Files:**
-    To run a specific test file, use:
-    ```bash
-    npx jest tests/<test-file-name>.js
-    ```
-    Replace `<test-file-name>` with the actual file name.
+   ```bash
+   git clone https://github.com/yourusername/qa-challenge03-PB-Nobugs.git
+   cd qa-challenge03-PB-Nobugs
+   ```
 
-- **View Test Coverage:**
-    To generate a coverage report:
-    ```bash
-    npm run test:coverage
-    ```
-    (Ensure a `test:coverage` script exists in `package.json`.)
+2. Execute os testes (exemplo com o Serverest):
 
-- **Configuration:**
-    - Test settings can be adjusted in the `jest.config.js` or equivalent config file.
-    - Environment variables can be set in a `.env` file at the project root.
+   ```bash
+   robot -d tests/results tests/serverest.robot
+   ```
 
-## Technologies Used
+   * `-d tests/results` → Define a pasta de saída dos relatórios.
+   * `tests/serverest.robot` → Arquivo de teste a ser executado.
 
-- Node.js
-- Jest (or your preferred test framework)
-- Additional QA tools as required
+3. Após a execução, consulte os relatórios em:
 
-## Contributing
+   ```
+   tests/results/report.html
+   tests/results/log.html
+   ```
 
-Contributions are welcome! Please open issues or submit pull requests for improvements.
+## Tecnologias Utilizadas
 
-## License
+* **Robot Framework**
+* **Python**
+* Bibliotecas auxiliares para automação de testes de API e UI
 
-This project is licensed under the MIT License.
+## Contribuindo
+
+Contribuições são bem-vindas!
+Abra uma issue ou envie um pull request com melhorias.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
