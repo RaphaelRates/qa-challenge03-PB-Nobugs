@@ -10,7 +10,7 @@ Suite Setup    Criar Sessao
 # LOGIN
 TC01 Login Valido
     [Tags]    login
-    ${r}=    Login    fulano@qa.com    teste
+    ${r}=    Login    fulano2@qa.com    teste
     Should Be Equal As Numbers    ${r.status_code}    ${STATUS_200}
 
 TC02 Login Invalido
@@ -85,7 +85,7 @@ TC10 Listar Produtos
 # PRODUTOS - POST /produtos
 TC11 Cadastrar Produto
     [Tags]    produtos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -102,7 +102,7 @@ TC12 Cadastrar Produto Sem Token
 # PRODUTOS - GET /produtos/{_id}
 TC13 Buscar Produto Por ID
     [Tags]    produtos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r1}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -119,7 +119,7 @@ TC14 Buscar Produto ID Inexistente
 # PRODUTOS - PUT /produtos/{_id}
 TC15 Atualizar Produto
     [Tags]    produtos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r1}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -132,7 +132,7 @@ TC15 Atualizar Produto
 # PRODUTOS - DELETE /produtos/{_id}
 TC16 Deletar Produto
     [Tags]    produtos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r1}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -149,7 +149,7 @@ TC17 Listar Carrinhos
 # CARRINHOS - POST /carrinhos
 TC18 Cadastrar Carrinho
     [Tags]    carrinhos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r_prod}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -167,7 +167,7 @@ TC18 Cadastrar Carrinho
 # CARRINHOS - GET /carrinhos/{_id}
 TC19 Buscar Carrinho Por ID
     [Tags]    carrinhos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r_prod}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -187,7 +187,7 @@ TC19 Buscar Carrinho Por ID
 # CARRINHOS - DELETE /carrinhos/concluir-compra
 TC20 Concluir Compra
     [Tags]    carrinhos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r_prod}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
@@ -205,7 +205,7 @@ TC20 Concluir Compra
 # CARRINHOS - DELETE /carrinhos/cancelar-compra
 TC21 Cancelar Compra
     [Tags]    carrinhos
-    ${r_login}=    Login    fulano@qa.com    teste
+    ${r_login}=    Login    fulano2@qa.com    teste
     ${token}=    Set Variable    ${r_login.json()['authorization']}
     ${nome}=    Generate Random String    10
     ${r_prod}=    Cadastrar Produto    Produto ${nome}    100    Desc    50    ${token}
