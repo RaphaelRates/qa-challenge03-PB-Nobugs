@@ -221,22 +221,3 @@ TC21 Cancelar Compra
     Deletar Usuario    ${r_user.json()['_id']}
 
 *** Comments ***
-# ENDPOINTS COBERTOS (21 testes):
-# POST   /login (2)
-# GET    /usuarios (1)
-# POST   /usuarios (2)
-# GET    /usuarios/{_id} (2)
-# PUT    /usuarios/{_id} (1)
-# DELETE /usuarios/{_id} (1)
-# GET    /produtos (1)
-# POST   /produtos (2)
-# GET    /produtos/{_id} (2)
-# PUT    /produtos/{_id} (1)
-# DELETE /produtos/{_id} (1)
-# GET    /carrinhos (1)
-# POST   /carrinhos (1)
-# GET    /carrinhos/{_id} (1)
-# DELETE /carrinhos/concluir-compra (1)
-# DELETE /carrinhos/cancelar-compra (1)
-
-# EXECUTAR: robot -d tests/results tests/serverest.robot
